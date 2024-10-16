@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Confirmation de Soumission</title>
+    <style>
+        body {
+            background-color: #e8f0f2; /* Couleur de fond douce */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Remplit toute la hauteur de la fenêtre */
+            margin: 0;
+        }
+        .card {
+            border-radius: 15px; /* Coins arrondis */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Ombre portée pour profondeur */
+            width: 400px; /* Largeur fixe de la carte */
+        }
+        .card-header {
+            background-color: #28a745; /* Couleur de fond de l'en-tête de la carte */
+            color: white; /* Couleur du texte de l'en-tête */
+            font-size: 2rem; /* Taille de la police de l'en-tête */
+            text-align: center; /* Centrer le texte de l'en-tête */
+            border-top-left-radius: 15px; /* Arrondir le coin supérieur gauche */
+            border-top-right-radius: 15px; /* Arrondir le coin supérieur droit */
+        }
+        .card-body {
+            text-align: center; /* Centrer le texte du corps de la carte */
+            font-size: 1.5rem; /* Taille de la police pour le message */
+        }
+        .btn {
+            margin-top: 20px; /* Marge supérieure pour espacement */
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-header">
+            Confirmation
+        </div>
+        <div class="card-body">
+            <p>Votre soumission a été reçue avec succès!</p>
+            <p>Merci de votre signalement.</p>
+            <a href="{% url 'index' %}" class="btn btn-primary">Retour à l'Accueil</a> <!-- Lien vers la page d'accueil -->
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

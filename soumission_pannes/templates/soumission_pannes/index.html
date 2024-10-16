@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">  <!-- Pour les icônes -->
+    <title>Application de Soumission de Pannes</title>
+    <style>
+        body {
+            background-color: #f8f9fa; /* Couleur de fond douce */
+        }
+        nav {
+            background-color: #007bff; /* Couleur de la barre de navigation */
+        }
+        .nav-link {
+            color: white; /* Couleur des liens de navigation */
+            font-weight: bold; /* Mettre le texte en gras */
+            border: 2px solid transparent; /* Bordure initiale transparente */
+            border-radius: 5px; /* Coins arrondis */
+            padding: 10px 20px; /* Espacement interne */
+            transition: background-color 0.3s, border-color 0.3s; /* Animation de transition */
+        }
+        .nav-link:hover {
+            color: #ffdd57; /* Changer la couleur au survol */
+            background-color: rgba(255, 255, 255, 0.2); /* Fond au survol */
+            border-color: #ffdd57; /* Changer la couleur de la bordure au survol */
+        }
+        h1 {
+            font-size: 2.5rem; /* Taille de la police du titre */
+            color: #007bff; /* Couleur du titre */
+            text-align: center; /* Centrer le titre */
+            margin-top: 20px; /* Marge supérieure */
+        }
+        p {
+            text-align: center; /* Centrer le texte */
+            font-size: 1.2rem; /* Taille de police du texte */
+            color: #333; /* Couleur du texte */
+        }
+        .container {
+            border-radius: 10px; /* Coins arrondis */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Ombre portée */
+            padding: 30px; /* Espacement interne */
+            background-color: white; /* Couleur de fond blanche */
+            margin-top: 30px; /* Marge supérieure pour espacer de la barre de navigation */
+        }
+    </style>
+</head>
+<body>
+    <!-- Barre de navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="{% url 'index' %}">Accueil</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'soumettre_panne' %}"><i class="fas fa-exclamation-circle"></i> Signaler Panne</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'a_propos' %}"><i class="fas fa-info-circle"></i> À Propos</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto"> <!-- Ajout de ml-auto pour pousser à droite -->
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i> Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'signup' %}"><i class="fas fa-user-plus"></i> Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Contenu principal de la page d'accueil -->
+    <div class="container mt-5">
+        <h1>Bienvenue dans l'Application de Soumission de Pannes</h1>
+        <p>Ceci est votre point de départ pour signaler des pannes.</p>
+        <!-- Vous pouvez ajouter plus de contenu ici -->
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
